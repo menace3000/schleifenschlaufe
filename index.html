@@ -11,16 +11,41 @@
       align-items: center;
       height: 100vh;
       background: white;
+      position: relative;
     }
 
     img {
-      transform: scale(0.5);   /* 50 % kleiner */
+      transform: scale(0.5);
       max-width: 100%;
       max-height: 100%;
+    }
+
+    .impressum {
+      position: absolute;
+      bottom: 10px;
+      right: 14px;
+      font-size: 11px;
+      color: #bbb;
+      font-family: Arial, sans-serif;
+    }
+
+    .impressum a {
+      color: #bbb;
+      text-decoration: none;
+    }
+
+    .impressum a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+
   <img src="black2.png" alt="Mein Bild">
+
+  <div class="impressum">
+    <a href="impressum.html">Impressum</a>
+  </div>
+
 </body>
 </html>

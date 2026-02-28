@@ -8,25 +8,42 @@
     body {
       font-family: Arial, sans-serif;
       background: black;
-      color: #ccc;
+      color: #aaa;
       padding: 40px;
       line-height: 1.6;
       font-size: 12px;
+
+      /* Fade-In Animation */
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      font-size: 12px;
+      font-weight: normal;
+      color: #aaa;
+      margin-bottom: 20px;
     }
 
     a {
-      color: #aaa;
+      color: #888;
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
-      color: #fff;
+      color: #ccc;
     }
 
     .small {
       font-size: 11px;
-      color: #777;
+      color: #666;
       margin-top: 20px;
     }
 
@@ -35,7 +52,7 @@
 </head>
 <body>
 
-<h2 style="font-size:14px;color:#eee;font-weight:normal;">Impressum</h2>
+<h2>Impressum</h2>
 
 <p>
 Dennis Karsten und Marek Rohde<br>

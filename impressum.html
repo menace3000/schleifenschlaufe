@@ -16,17 +16,18 @@
       overflow: hidden;
     }
 
-    img {
-      max-width: 100%;
-      max-height: 100%;
-
-      /* Startzustand */
+    /* Wrapper wird animiert */
+    .symbol {
       opacity: 0;
       transform: scale(0.99);
+      animation: fadeScaleIn 3s ease-out forwards;
+      animation-delay: 0.3s;
+    }
 
-      /* Animation */
-      animation: fadeScaleIn 2.5s ease-out forwards;
-      animation-delay: 0.2s;
+    .symbol img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
     }
 
     @keyframes fadeScaleIn {
@@ -63,7 +64,9 @@
 </head>
 <body>
 
-  <img src="magenta_black.png" alt="Schleifenschlaufe">
+  <div class="symbol">
+    <img src="magenta_black.png" alt="Schleifenschlaufe">
+  </div>
 
   <div class="impressum">
     <a href="impressum.html">Impressum</a>

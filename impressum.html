@@ -2,20 +2,28 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Impressum – Schleifenschlaufe</title>
+  <title>Schleifenschlaufe</title>
 
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
       background: black;
-      color: #aaa;
-      padding: 40px;
-      line-height: 1.6;
-      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+    }
 
-      /* Fade-In Animation */
+    img {
+      transform: scale(0.5);
+      max-width: 100%;
+      max-height: 100%;
+
+      /* Fade-In */
       opacity: 0;
-      animation: fadeIn 1.5s ease forwards;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 0.3s;
     }
 
     @keyframes fadeIn {
@@ -24,27 +32,22 @@
       }
     }
 
-    h2 {
-      font-size: 12px;
-      font-weight: normal;
-      color: #aaa;
-      margin-bottom: 20px;
+    .impressum {
+      position: absolute;
+      bottom: 10px;
+      right: 14px;
+      font-size: 11px;
+      color: #666;
+      font-family: Arial, sans-serif;
     }
 
-    a {
-      color: #888;
+    .impressum a {
+      color: #666;
       text-decoration: none;
     }
 
-    a:hover {
+    .impressum a:hover {
       text-decoration: underline;
-      color: #ccc;
-    }
-
-    .small {
-      font-size: 11px;
-      color: #666;
-      margin-top: 20px;
     }
 
   </style>
@@ -52,22 +55,11 @@
 </head>
 <body>
 
-<h2>Impressum</h2>
+  <img src="magenta_black.png" alt="Schleifenschlaufe">
 
-<p>
-Dennis Karsten und Marek Rohde<br>
-Kastanienallee 64a<br>
-10119 Berlin<br>
-Germany
-</p>
-
-<p>
-<a href="mailto:mail@schleifenschlaufe.de">mail@schleifenschlaufe.de</a>
-</p>
-
-<p class="small">
-Angaben gemäß § 5 TMG
-</p>
+  <div class="impressum">
+    <a href="impressum.html">Impressum</a>
+  </div>
 
 </body>
 </html>

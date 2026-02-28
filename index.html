@@ -15,10 +15,21 @@
       position: relative;
     }
 
-    img {
-      transform: scale(0.5); /* falls du wieder 50% willst, sonst löschen */
+    #symbol {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 2s ease-out, transform 2s ease-out;
+    }
+
+    #symbol.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    #symbol img {
       max-width: 100%;
       max-height: 100%;
+      display: block;
     }
 
     .impressum {
@@ -35,20 +46,24 @@
       text-decoration: none;
     }
 
-    .impressum a:hover {
-      text-decoration: underline;
-    }
-
   </style>
 
 </head>
 <body>
 
-  <img src="magenta_black.png" alt="Schleifenschlaufe">
+  <div id="symbol">
+    <img src="magenta_black.png?v=2" alt="Schleifenschlaufe">
+  </div>
 
   <div class="impressum">
     <a href="impressum.html">Impressum</a>
   </div>
+
+  <script>
+    window.addEventListener("load", function() {
+      document.getElementById("symbol").classList.add("visible");
+    });
+  </script>
 
 </body>
 </html>

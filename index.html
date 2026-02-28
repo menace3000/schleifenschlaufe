@@ -16,20 +16,22 @@
       overflow: hidden;
     }
 
-    #symbol {
-      opacity: 0;
+   #symbol {
+  opacity: 0;
 
-      /* 50% Grundgröße + subtiler Start */
-      transform: scale(0.495);
+  /* extrem subtil: 49.8% */
+  transform: scale(0.498);
 
-      transition: opacity 2s ease-out, transform 2s ease-out;
-    }
+  transition:
+    opacity 6s ease-out,
+    transform 6s cubic-bezier(0.22, 1, 0.36, 1);
+}
 
-    #symbol.visible {
-      opacity: 1;
+#symbol.visible {
+  opacity: 1;
 
-      /* Ziel: exakt 50% */
-      transform: scale(0.5);
+  /* Ziel: 50% */
+  transform: scale(0.5);
     }
 
     #symbol img {

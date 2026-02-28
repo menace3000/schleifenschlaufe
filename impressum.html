@@ -2,48 +2,49 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Schleifenschlaufe</title>
+  <title>Impressum – Schleifenschlaufe</title>
 
   <style>
     body {
-      margin: 0;
+      font-family: Arial, sans-serif;
       background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      position: relative;
-    }
+      color: #aaa;
+      padding: 40px;
+      line-height: 1.6;
+      font-size: 12px;
 
-    #symbol {
+      /* Fade-In Animation */
       opacity: 0;
-      transform: scale(0.95);
-      transition: opacity 2s ease-out, transform 2s ease-out;
+      animation: fadeIn 1.5s ease forwards;
     }
 
-    #symbol.visible {
-      opacity: 1;
-      transform: scale(1);
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
-    #symbol img {
-      max-width: 100%;
-      max-height: 100%;
-      display: block;
+    h2 {
+      font-size: 12px;
+      font-weight: normal;
+      color: #aaa;
+      margin-bottom: 20px;
     }
 
-    .impressum {
-      position: absolute;
-      bottom: 10px;
-      right: 14px;
+    a {
+      color: #888;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #ccc;
+    }
+
+    .small {
       font-size: 11px;
       color: #666;
-      font-family: Arial, sans-serif;
-    }
-
-    .impressum a {
-      color: #666;
-      text-decoration: none;
+      margin-top: 20px;
     }
 
   </style>
@@ -51,19 +52,22 @@
 </head>
 <body>
 
-  <div id="symbol">
-    <img src="magenta_black.png?v=2" alt="Schleifenschlaufe">
-  </div>
+<h2>Impressum</h2>
 
-  <div class="impressum">
-    <a href="impressum.html">Impressum</a>
-  </div>
+<p>
+Dennis Karsten<br>
+Kastanienallee 64a<br>
+10119 Berlin<br>
+Germany
+</p>
 
-  <script>
-    window.addEventListener("load", function() {
-      document.getElementById("symbol").classList.add("visible");
-    });
-  </script>
+<p>
+<a href="mailto:mail@schleifenschlaufe.de">mail@schleifenschlaufe.de</a>
+</p>
+
+<p class="small">
+Angaben gemäß § 5 TMG
+</p>
 
 </body>
 </html>

@@ -4,40 +4,39 @@
   <meta charset="UTF-8">
   <title>Schleifenschlaufe</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
-body {
-  margin: 0;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    body {
+      margin: 0;
+      background: black;
 
-  /* Fix für iPhone Safari */
-  height: 100dvh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-  /* Fallback für ältere Browser */
-  min-height: 100vh;
+      height: 100dvh;
+      min-height: 100vh;
 
-  position: relative;
-  overflow: hidden;
-}
+      position: relative;
+      overflow: hidden;
 
-   #symbol {
-  opacity: 0;
+      font-family: Arial, sans-serif;
+    }
 
-  /* extrem subtil: 49.8% */
-  transform: scale(0.499);
+    /* Symbol mit extrem subtilem Fade + Scale */
+    #symbol {
+      opacity: 0;
+      transform: scale(0.498);
 
-  transition:
-    opacity 2s ease-out,
-    transform 2s cubic-bezier(0.22, 1, 0.36, 1);
-}
+      transition:
+        opacity 6s ease-out,
+        transform 6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
 
-#symbol.visible {
-  opacity: 1;
-
-  /* Ziel: 50% */
-  transform: scale(0.5);
+    #symbol.visible {
+      opacity: 1;
+      transform: scale(0.5);
     }
 
     #symbol img {
@@ -46,23 +45,34 @@ body {
       max-height: 100%;
     }
 
- .impressum {
-  position: fixed;   /* statt absolute */
-  bottom: 10px;
-  right: 14px;
-  font-size: 11px;
-  color: #666;
-  font-family: Arial, sans-serif;
-  z-index: 10;
-}
+    /* Impressum: visuell klein, aber gut klickbar */
+    .impressum {
+      position: fixed;
+      bottom: 14px;
+      right: 14px;
+      z-index: 10;
+    }
 
     .impressum a {
+      display: inline-block;
+
+      font-size: 11px;
       color: #666;
       text-decoration: none;
+
+      /* größere unsichtbare Tippfläche */
+      padding: 8px 10px;
+
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
     }
 
     .impressum a:hover {
-      text-decoration: underline;
+      opacity: 1;
+    }
+
+    .impressum a:active {
+      opacity: 1;
     }
 
   </style>
@@ -71,7 +81,7 @@ body {
 <body>
 
   <div id="symbol">
-    <img src="magenta_black.png?v=3" alt="Schleifenschlaufe">
+    <img src="magenta_black.png?v=6" alt="Schleifenschlaufe">
   </div>
 
   <div class="impressum">

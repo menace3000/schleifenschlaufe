@@ -7,22 +7,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    body {
-      margin: 0;
-      background: black;
+    html, body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-      height: 100dvh;
-      min-height: 100vh;
+  /* Safari-Fix Kombination */
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
 
-      position: relative;
-      overflow: hidden;
+  /* Safe-Area berücksichtigen */
+  padding-bottom: env(safe-area-inset-bottom);
 
-      font-family: Arial, sans-serif;
-    }
+  position: relative;
+  overflow: hidden;
+
+  font-family: Arial, sans-serif;
+}
 
     /* Symbol mit extrem subtilem Fade + Scale */
     #symbol {

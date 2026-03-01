@@ -46,14 +46,15 @@ body {
       max-height: 100%;
     }
 
-    .impressum {
-      position: absolute;
-      bottom: 10px;
-      right: 14px;
-      font-size: 11px;
-      color: #666;
-      font-family: Arial, sans-serif;
-    }
+ .impressum {
+  position: fixed;   /* statt absolute */
+  bottom: 10px;
+  right: 14px;
+  font-size: 11px;
+  color: #666;
+  font-family: Arial, sans-serif;
+  z-index: 10;
+}
 
     .impressum a {
       color: #666;

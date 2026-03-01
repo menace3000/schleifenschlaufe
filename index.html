@@ -5,16 +5,22 @@
   <title>Schleifenschlaufe</title>
 
   <style>
-    body {
-      margin: 0;
-      background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      position: relative;
-      overflow: hidden;
-    }
+body {
+  margin: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Fix für iPhone Safari */
+  height: 100dvh;
+
+  /* Fallback für ältere Browser */
+  min-height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+}
 
    #symbol {
   opacity: 0;

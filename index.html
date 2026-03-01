@@ -46,34 +46,34 @@
     }
 
     /* Impressum: visuell klein, aber gut klickbar */
-    .impressum {
-      position: fixed;
-      bottom: 14px;
-      right: 14px;
-      z-index: 10;
-    }
+  .impressum {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 10;
+}
 
-    .impressum a {
-      display: inline-block;
+.impressum a {
+  display: inline-block;
 
-      font-size: 11px;
-      color: #666;
-      text-decoration: none;
+  font-size: 12px;          /* vorher 11px */
+  color: #888;              /* heller als vorher */
+  text-decoration: none;
 
-      /* größere unsichtbare Tippfläche */
-      padding: 8px 10px;
+  padding: 8px 10px;
 
-      opacity: 0.6;
-      transition: opacity 0.3s ease;
-    }
+  opacity: 0.85;            /* vorher 0.6 */
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
 
-    .impressum a:hover {
-      opacity: 1;
-    }
+.impressum a:hover {
+  opacity: 1;
+  color: #aaa;
+}
 
-    .impressum a:active {
-      opacity: 1;
-    }
+.impressum a:active {
+  opacity: 1;
+}
 
   </style>
 
